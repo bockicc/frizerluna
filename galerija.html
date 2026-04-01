@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerija - LUNA HAIR STUDIO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">LUNA</a>
+      
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <div class="nav-links">
+        <a href="index.html">Početna</a>
+        <a href="usluge.html">Usluge</a>
+        <a href="tim.html">Tim</a>
+        <a href="galerija.html">Galerija</a>
+        <a href="cenovnik.html">Cenovnik</a>
+        <a href="blog.html">Blog</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+      <a href="kontakt.html" class="btn">Zakaži termin</a>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-content">
+      <h1 class="heading">Galerija</h1>
+      <p>Naši radovi • Transformacije • 2026 stil</p>
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <h2>Naši radovi</h2>
+    
+    <div class="gallery-grid">
+      
+      <div class="gallery-item">
+        <img src="https://picsum.photos/id/1011/800/1000" alt="Balayage transformacija">
+        <div class="gallery-overlay">
+          <h3>Balayage Honey</h3>
+          <p>Ženska klijentkinja</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://picsum.photos/id/870/800/1000" alt="Moderni bob">
+        <div class="gallery-overlay">
+          <h3>Moderni Bob</h3>
+          <p>Kratka frizura</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://picsum.photos/id/133/800/1000" alt="Keratin tretman">
+        <div class="gallery-overlay">
+          <h3>Restauracija kose</h3>
+          <p>Olaplex + Keratin</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://picsum.photos/id/1060/800/1000" alt="Muški fade">
+        <div class="gallery-overlay">
+          <h3>Sharp Fade</h3>
+          <p>Muška frizura</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://picsum.photos/id/201/800/1000" alt="Vibrant color">
+        <div class="gallery-overlay">
+          <h3>Vibrant Red</h3>
+          <p>Trendy boja</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://picsum.photos/id/133/800/1000" alt="Long hair">
+        <div class="gallery-overlay">
+          <h3>Duga kosa sa slojevima</h3>
+          <p>Volume & Shine</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Developed by **VelDeep** • Sva prava zadržana</p>
+  </footer>
+
+  <script>
+    const menu = document.querySelector('#mobile-menu');
+    const menuLinks = document.querySelector('.nav-links');
+
+    menu.addEventListener('click', () => {
+      menu.classList.toggle('is-active');
+      menuLinks.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

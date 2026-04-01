@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt - LUNA HAIR STUDIO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">LUNA</a>
+      
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <div class="nav-links">
+        <a href="index.html">Početna</a>
+        <a href="usluge.html">Usluge</a>
+        <a href="tim.html">Tim</a>
+        <a href="galerija.html">Galerija</a>
+        <a href="cenovnik.html">Cenovnik</a>
+        <a href="blog.html">Blog</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+      <a href="kontakt.html" class="btn">Zakaži termin</a>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-content">
+      <h1 class="heading">Kontaktiraj nas</h1>
+      <p>Zakaži termin • Postavi pitanje • Dođi kod nas</p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="contact-container">
+
+      <div class="contact-form">
+        <h2>Zakaži termin</h2>
+        <form>
+          <div class="form-group">
+            <label>Ime i prezime</label>
+            <input type="text" placeholder="Unesite vaše ime" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Broj telefona</label>
+            <input type="tel" placeholder="+381 64 123 4567" required>
+          </div>
+
+          <div class="form-group">
+            <label>Email adresa</label>
+            <input type="email" placeholder="vasa@email.com">
+          </div>
+
+          <div class="form-group">
+            <label>Datum i vreme</label>
+            <input type="datetime-local" required>
+          </div>
+
+          <div class="form-group">
+            <label>Izaberite uslugu</label>
+            <select required>
+              <option value="">Izaberite uslugu...</option>
+              <option>Šišanje & Styling</option>
+              <option>Balayage / Farbanje</option>
+              <option>Keratin tretman</option>
+              <option>Olaplex terapija</option>
+              <option>Muška frizura</option>
+              <option>Drugo</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Poruka / Napomena</label>
+            <textarea rows="4" placeholder="Dodatne želje, pitanja..."></textarea>
+          </div>
+
+          <button type="submit" class="btn" style="width: 100%; padding: 1.2rem; font-size: 1.1rem;">
+            Pošalji zahtev za zakazivanje
+          </button>
+        </form>
+      </div>
+
+      <div class="contact-info">
+        <h2>Nađite nas</h2>
+        
+        <div class="info-item">
+          <strong>Adresa:</strong>
+          <p>Voždova 45, Niš</p>
+        </div>
+        
+        <div class="info-item">
+          <strong>Telefon:</strong>
+          <p><a href="tel:+381641234567">+381 64 123 4567</a></p>
+        </div>
+        
+        <div class="info-item">
+          <strong>Email:</strong>
+          <p><a href="mailto:info@lunahair.rs">info@lunahair.rs</a></p>
+        </div>
+
+        <div class="info-item">
+          <strong>Radno vreme:</strong>
+          <p>
+            Ponedeljak – Petak: 09:00 – 20:00<br>
+            Subota: 09:00 – 17:00<br>
+            Nedelja: Zatvoreno
+          </p>
+        </div>
+
+        <div class="info-item" style="margin-top: 2rem;">
+          <div style="background: #151515; padding: 40px; border-radius: 20px; border: 1px dashed var(--gold); text-align: center;">
+            <span style="font-size: 2.5rem;">📍</span>
+            <h3 style="color: var(--gold); font-family: var(--font-serif); margin-top: 15px;">Interaktivna mapa je u pripremi</h3>
+            <p style="opacity: 0.7; font-weight: 300;">Trenutno mapiramo studio u Voždovoj 45. Vidimo se uskoro!</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Developed by **VelDeep** • Sva prava zadržana</p>
+  </footer>
+
+  <script>
+    const menu = document.querySelector('#mobile-menu');
+    const menuLinks = document.querySelector('.nav-links');
+
+    menu.addEventListener('click', () => {
+      menu.classList.toggle('is-active');
+      menuLinks.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

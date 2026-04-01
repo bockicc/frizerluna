@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUNA HAIR STUDIO • Niš</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<nav>
+  <div class="nav-container">
+    <a href="index.html" class="logo">LUNA</a>
+    
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html" id="nav-pocetna">Početna</a>
+      <a href="usluge.html" id="nav-usluge">Usluge</a>
+      <a href="tim.html" id="nav-tim">Tim</a>
+      <a href="galerija.html" id="nav-galerija">Galerija</a>
+      <a href="cenovnik.html" id="nav-cenovnik">Cenovnik</a>
+      <a href="kontakt.html" id="nav-kontakt">Kontakt</a>
+    </div>
+
+    <a href="kontakt.html" class="btn">Zakaži termin</a>
+  </div>
+</nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="heading">Tvoja kosa.<br>Tvoja snaga.<br><span style="color: var(--gold);">Tvoja LUNA.</span></h1>
+      <p style="font-size: 1.45rem; max-width: 680px; margin: 1.5rem auto; opacity: 0.95;">
+        Luxury unisex frizerski studio u Nišu<br>
+        Moderni krojevi • Balayage • Profesionalna nega kose
+      </p>
+      <div style="margin-top: 2.5rem;">
+        <a href="kontakt.html" class="btn" style="font-size: 1.2rem; padding: 1.1rem 2.8rem;">Zakaži termin odmah</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="info-grid">
+      
+      <div class="info-card">
+        <span class="emoji">✂️</span>
+        <h3>Premium Šišanje</h3>
+        <p>Od klasičnih krojeva do najnovijih trendova 2026.</p>
+      </div>
+      
+      <div class="info-card">
+        <span class="emoji">🎨</span>
+        <h3>Balayage & Farbanje</h3>
+        <p>Profesionalne tehnike i najkvalitetnije boje.</p>
+      </div>
+      
+      <div class="info-card">
+        <span class="emoji">💆‍♀️</span>
+        <h3>Nega Kose</h3>
+        <p>Keratin, Olaplex, Botoks i restorativni tretmani.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 120px 0; text-align: center; background: linear-gradient(135deg, #1a1a1a, #0a0a0a);">
+    <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">Spremni za novu transformaciju?</h2>
+    <p style="font-size: 1.3rem; max-width: 600px; margin: 0 auto 2.5rem; opacity: 0.9;">
+      Dođi u LUNA Hair Studio i prepusti se rukama naših majstora.
+    </p>
+    <a href="usluge.html" class="btn" style="font-size: 1.15rem;">Pogledaj sve usluge</a>
+  </section>
+
+  <footer>
+    <p>© 2026 Developed by **VelDeep** • Sva prava zadržana</p>
+  </footer>
+
+  <script>
+    const menu = document.querySelector('#mobile-menu');
+    const menuLinks = document.querySelector('.nav-links');
+
+    menu.addEventListener('click', () => {
+      menu.classList.toggle('is-active');
+      menuLinks.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

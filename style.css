@@ -1,0 +1,634 @@
+/* ==================== 1. GOOGLE FONTS & RESET ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg-dark: #0a0a0a;
+  --bg-card: #111;
+  --text-main: #fff;
+  --text-muted: #aaa;
+  --gold: #d4af37;
+  --gold-hover: #f3cf65;
+  
+  /* Definisane font varijable */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Poppins', sans-serif;
+}
+
+/* Osnovni Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-sans); /* Osnovni font za tekst */
+  line-height: 1.6;
+  overflow-x: hidden; /* Sprečava horizontalno skrolovanje */
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s ease; }
+
+/* Globalni Naslovi (Serif) */
+h1, h2, h3, .logo {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+/* ==================== 2. GLOBALNA DUGMAD (Sa PULSE animacijom) ==================== */
+.btn {
+  display: inline-block;
+  padding: 1.1rem 2.8rem;
+  background: transparent;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+  border-radius: 50px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  background: var(--gold);
+  color: #000;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+  transform: translateY(-3px);
+}
+
+/* Pulse animacija za Hero dugme */
+.hero .btn {
+    animation: btnPulse 2s infinite ease-in-out;
+}
+
+@keyframes btnPulse {
+    0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.6); }
+    70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+/* ==================== 3. NAVBAR (NAVIGACIJA - Poboljšana) ==================== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(8, 8, 8, 0.96);
+  backdrop-filter: blur(12px); /* Jači blur efekat */
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.nav-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 1.2rem 2.5rem; /* Veći padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2.1rem; /* Malo veći logo */
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: var(--gold);
+  transition: 0.3s;
+}
+
+.logo:hover {
+  color: #fff;
+}
+
+/* Navigacioni Linkovi sa HOVER linijom */
+.nav-links {
+  display: flex;
+  gap: 2.5rem; /* Veći razmak između linkova */
+}
+
+.nav-links a {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.7;
+  font-weight: 500;
+  position: relative; /* Za hover liniju */
+  padding-bottom: 5px;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  opacity: 1;
+  color: var(--gold);
+}
+
+/* Hover linija koja se izvlači s leva na desno */
+.nav-links a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--gold);
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover:after, .nav-links a.active:after {
+    width: 100%;
+}
+
+/* ==================== 4. HERO SEKCIJE (Sa Fade-In animacijom) ==================== */
+.hero, .page-hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)), 
+              url('https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=2000') center/cover no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero {
+    height: 55vh; /* Malo veća unutrašnja hero sekcija */
+    margin-top: 80px; /* Visina novog nav bara */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), 
+                url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2000') center/cover no-repeat;
+}
+
+/* Fade-In animacija celog Hero sadržaja */
+.hero-content {
+    max-width: 950px;
+    padding: 0 2rem;
+    z-index: 2;
+    animation: heroFadeIn 1.5s ease-out;
+}
+
+@keyframes heroFadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.hero .heading {
+  font-size: 5.8rem; /* Dramatično veći naslov */
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==================== 5. INFO SEKCIJA (POČETNA - IZMENJENO SAMO OVO) ==================== */
+.info-section {
+  padding: 100px 0;
+  background-color: var(--bg-dark); /* Da okvir dođe do izražaja na crnom */
+}
+
+.info-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  text-align: center;
+}
+
+.info-card {
+  padding: 2.5rem 1.5rem;
+  border-radius: 20px;
+  background: var(--bg-card);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+/* Okvir i skok na hover */
+.info-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--gold);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+}
+
+.info-card .emoji {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease;
+}
+
+.info-card:hover .emoji {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.info-card h3 {
+  color: var(--gold);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.info-card p {
+  opacity: 0.85;
+  color: var(--text-main);
+}
+
+/* ==================== 6. GLOBALNE SEKCIJE & GRID ==================== */
+section {
+    padding: 100px 2rem;
+    max-width: 1300px; /* Veća širina sekcija */
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3rem; /* Veći naslovi sekcija */
+    margin-bottom: 4rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Globalni Grid sistem za Usluge, Tim, Galeriju, Cenovnik */
+.services-grid, .team-grid, .gallery-grid, .pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Veće kartice */
+  gap: 3rem;
+}
+
+/* Globalni Card Stil */
+.service-card, .team-card, .gallery-item, .pricing-category {
+  background: var(--bg-card);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  transition: 0.5s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover efekti na karticama */
+.service-card:hover, .team-card:hover {
+    transform: translateY(-12px);
+    border-color: var(--gold);
+    box-shadow: 0 20px 50px rgba(212, 175, 55, 0.2);
+}
+
+/* ==================== 7. USLUGE (Usluge.html) ==================== */
+.service-card img {
+  width: 100%;
+  height: 280px; /* Malo veća slika */
+  object-fit: cover;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.service-content {
+  padding: 2rem;
+}
+
+.service-content h3 {
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+  color: var(--gold);
+}
+
+.price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 2rem;
+  font-family: var(--font-sans);
+}
+
+.service-list {
+  list-style: none;
+}
+
+.service-list li {
+  padding: 0.6rem 0;
+  position: relative;
+  padding-left: 2rem;
+  font-size: 1.1rem;
+  color: #ccc;
+  font-weight: 300;
+}
+
+.service-list li:before {
+  content: "✓";
+  color: var(--gold);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* ==================== 8. TIM (Tim.html - Poboljšan) ==================== */
+.team-image {
+    position: relative;
+    height: 450px; /* Veća slika */
+    overflow: hidden;
+}
+
+.team-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Zoom i de-grayscale efekat na hover */
+.team-card:hover .team-image img {
+    transform: scale(1.08);
+}
+
+.team-info {
+  padding: 2rem;
+  text-align: center;
+}
+
+.team-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--gold);
+}
+
+.role {
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+  font-family: var(--font-sans);
+}
+
+.bio {
+  color: #ddd;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  font-size: 1.05rem;
+}
+
+.specialty {
+  font-size: 1rem;
+  color: var(--gold);
+  font-weight: 600;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  letter-spacing: 1px;
+}
+
+/* ==================== 9. GALERIJA (Galerija.html - Poboljšana) ==================== */
+.gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+  position: relative;
+  height: 500px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease, filter 0.7s ease;
+  filter: grayscale(40%); /* Diskretan grayscale efekat */
+}
+
+/* Zoom i vraćanje boja na hover */
+.gallery-item:hover img {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.95));
+  padding: 3rem 2rem 2rem;
+  color: white;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.gallery-item:hover .gallery-overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.gallery-overlay h3 {
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-overlay p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  font-weight: 300;
+}
+
+/* ==================== 10. CENOVNIK (Cenovnik.html) ==================== */
+.pricing-category {
+  padding: 4rem 3rem;
+  border-radius: 25px;
+}
+
+.pricing-category:hover {
+    border-color: rgba(212, 175, 55, 0.3);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+.pricing-category h3 {
+  font-size: 2.1rem;
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.price-list li {
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: #eee;
+}
+
+.price-list li:last-child {
+  border-bottom: none;
+}
+
+.price-list .price {
+  font-weight: 700;
+  color: var(--gold);
+  font-family: var(--font-sans);
+}
+
+/* ==================== 11. KONTAKT (Kontakt.html) ==================== */
+.contact-container {
+    gap: 5rem;
+}
+
+.contact-form {
+  padding: 4rem;
+  border-radius: 25px;
+}
+
+.form-group {
+  margin-bottom: 1.8rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: var(--gold);
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%; padding: 1.2rem; background: #151515; border: 1px solid #2a2a2a; color: #fff; border-radius: 12px; font-family: var(--font-sans); font-size: 1.05rem;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+}
+
+.contact-info strong {
+  display: block;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  font-family: var(--font-sans);
+}
+
+.contact-info p, .contact-info a {
+    color: #ccc;
+    font-size: 1.15rem;
+    font-weight: 300;
+}
+
+/* ==================== 12. FOOTER (Poboljšan) ==================== */
+footer {
+  text-align: center;
+  padding: 6rem 3rem;
+  background-color: #050505;
+  border-top: 1px solid #111;
+  position: relative;
+  z-index: 10;
+}
+
+footer p {
+  opacity: 0.5;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  font-weight: 300;
+  color: #fff;
+}
+
+
+/* ==================== DODATAK ZA MOBILNI MENI & RESPONSIVE ==================== */
+
+/* 1. Stil za Hamburger (Tri crtice) */
+.menu-toggle {
+  display: none; /* Sakriven na desktopu */
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.bar {
+  width: 28px;
+  height: 3px;
+  background-color: var(--gold);
+  margin: 4px 0;
+  transition: 0.4s;
+  border-radius: 2px;
+}
+
+/* 2. Media Query za Tablet i Telefon (Ispod 992px) */
+@media (max-width: 992px) {
+  .menu-toggle {
+    display: flex; /* Pojavljuje se na mobilnom */
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Inicijalno sklonjen sa ekrana */
+    width: 70%; /* Ne zauzima ceo ekran, izgleda modernije */
+    height: 100vh;
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(15px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+  }
+
+  /* Klasa koju JS dodaje na klik */
+  .nav-links.active {
+    right: 0;
+  }
+
+  /* Sakrivamo fiksno dugme iz navigacije na fonu da ne smeta */
+  .nav-container > .btn {
+    display: none;
+  }
+
+  /* Animacija hamburgera u X kad je otvoren */
+  .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+  .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(11px) rotate(45deg); }
+  .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-11px) rotate(-45deg); }
+
+  /* Prilagođavanje Hero naslova za mobilni */
+  .hero .heading {
+    font-size: 3rem !important;
+  }
+  
+  .page-hero .heading {
+    font-size: 2.5rem !important;
+  }
+}
+
+/* 3. Media Query za male telefone (Ispod 600px) */
+@media (max-width: 600px) {
+  .services-grid, .team-grid, .gallery-grid, .pricing-grid {
+    grid-template-columns: 1fr; /* Sve ide u jednu kolonu */
+  }
+  
+  section {
+    padding: 60px 1.5rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+}

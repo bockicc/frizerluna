@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - LUNA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">LUNA</a>
+      
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <div class="nav-links">
+        <a href="index.html">Početna</a>
+        <a href="usluge.html">Usluge</a>
+        <a href="tim.html">Tim</a>
+        <a href="galerija.html">Galerija</a>
+        <a href="cenovnik.html">Cenovnik</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+      <a href="kontakt.html" class="btn">Zakaži termin</a>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-content">
+      <h1 class="heading">LUNA Blog</h1>
+      <p>Saveti za negu i najnoviji trendovi</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-content">
+          <h3>Uskoro prvi tekstovi...</h3>
+          <p>Radimo na pripremi najboljih saveta za vašu kosu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Developed by **VelDeep** • Sva prava zadržana</p>
+  </footer>
+
+  <script>
+    const menu = document.querySelector('#mobile-menu');
+    const menuLinks = document.querySelector('.nav-links');
+
+    menu.addEventListener('click', () => {
+      menu.classList.toggle('is-active');
+      menuLinks.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

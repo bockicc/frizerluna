@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usluge - LUNA HAIR STUDIO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">LUNA</a>
+      
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <div class="nav-links">
+        <a href="index.html">Početna</a>
+        <a href="usluge.html">Usluge</a>
+        <a href="tim.html">Tim</a>
+        <a href="galerija.html">Galerija</a>
+        <a href="cenovnik.html">Cenovnik</a>
+        <a href="blog.html">Blog</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+      <a href="kontakt.html" class="btn">Zakaži termin</a>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-content">
+      <h1 class="heading">Naše usluge</h1>
+      <p>Premium frizerske usluge • Moderni stilovi • Profesionalna nega</p>
+    </div>
+  </section>
+
+  <section class="services-section">
+    <h2>Naše usluge</h2>
+    
+    <div class="services-grid">
+      
+      <div class="service-card">
+        <img src="https://picsum.photos/id/1011/800/600" alt="Šišanje i styling">
+        <div class="service-content">
+          <h3>Šišanje &amp; Styling</h3>
+          <div class="price">od 2.500 RSD</div>
+          <ul class="service-list">
+            <li>Muško šišanje</li>
+            <li>Žensko šišanje</li>
+            <li>Dečije šišanje</li>
+            <li>Feniranje i styling</li>
+            <li>Bradanje i oblikovanje</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://picsum.photos/id/870/800/600" alt="Balayage">
+        <div class="service-content">
+          <h3>Farbanje &amp; Balayage</h3>
+          <div class="price">od 4.500 RSD</div>
+          <ul class="service-list">
+            <li>Balayage / Ombre</li>
+            <li>AirTouch tehnika</li>
+            <li>Root touch up</li>
+            <li>Kompletno farbanje</li>
+            <li>Highlight / Lowlight</li>
+            <li>Trendy boje 2026</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://picsum.photos/id/133/800/600" alt="Tretmani kose">
+        <div class="service-content">
+          <h3>Nega i Tretmani</h3>
+          <div class="price">od 3.000 RSD</div>
+          <ul class="service-list">
+            <li>Keratin tretman</li>
+            <li>Botoks za kosu</li>
+            <li>Hidratantni tretman</li>
+            <li>Olaplex terapija</li>
+            <li>Skalp tretman</li>
+            <li>Restorativni tretman</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://picsum.photos/id/1060/800/600" alt="Muške frizure">
+        <div class="service-content">
+          <h3>Muške Frizure</h3>
+          <div class="price">od 2.200 RSD</div>
+          <ul class="service-list">
+            <li>Moderni fade</li>
+            <li>Undercut &amp; Pompadour</li>
+            <li>Textured crop</li>
+            <li>Beard shaping</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Developed by **VelDeep** • Sva prava zadržana</p>
+  </footer>
+
+  <script>
+    const menu = document.querySelector('#mobile-menu');
+    const menuLinks = document.querySelector('.nav-links');
+
+    menu.addEventListener('click', () => {
+      menu.classList.toggle('is-active');
+      menuLinks.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

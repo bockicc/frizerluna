@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cenovnik - LUNA HAIR STUDIO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">LUNA</a>
+      
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <div class="nav-links">
+        <a href="index.html">Početna</a>
+        <a href="usluge.html">Usluge</a>
+        <a href="tim.html">Tim</a>
+        <a href="galerija.html">Galerija</a>
+        <a href="cenovnik.html">Cenovnik</a>
+        <a href="blog.html">Blog</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+      <a href="kontakt.html" class="btn">Zakaži termin</a>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-content">
+      <h1 class="heading">Cenovnik</h1>
+      <p>Transparentne cene • Kvalitetne usluge • 2026</p>
+    </div>
+  </section>
+
+  <section class="pricing-section">
+    <h2>Naše cene</h2>
+    
+    <div class="pricing-grid">
+
+      <div class="pricing-category">
+        <h3>Šišanje &amp; Styling</h3>
+        <ul class="price-list">
+          <li><span>Muško šišanje</span> <span class="price">2.500 RSD</span></li>
+          <li><span>Žensko šišanje</span> <span class="price">3.000 RSD</span></li>
+          <li><span>Dečije šišanje (do 12 god)</span> <span class="price">1.800 RSD</span></li>
+          <li><span>Feniranje / Styling</span> <span class="price">2.200 RSD</span></li>
+          <li><span>Brada + oblikovanje</span> <span class="price">1.500 RSD</span></li>
+        </ul>
+      </div>
+
+      <div class="pricing-category">
+        <h3>Farbanje &amp; Balayage</h3>
+        <ul class="price-list">
+          <li><span>Root touch up</span> <span class="price">4.500 RSD</span></li>
+          <li><span>Balayage / Ombre</span> <span class="price">6.500 – 9.000 RSD</span></li>
+          <li><span>AirTouch tehnika</span> <span class="price">7.500 – 11.000 RSD</span></li>
+          <li><span>Kompletno farbanje</span> <span class="price">5.500 RSD</span></li>
+          <li><span>Highlight / Lowlight</span> <span class="price">5.000 – 8.000 RSD</span></li>
+          <li><span>Vibrant / Fashion boje</span> <span class="price">8.000+ RSD</span></li>
+        </ul>
+      </div>
+
+      <div class="pricing-category">
+        <h3>Nega i Tretmani</h3>
+        <ul class="price-list">
+          <li><span>Keratin tretman</span> <span class="price">6.000 – 9.000 RSD</span></li>
+          <li><span>Botoks za kosu</span> <span class="price">7.500 RSD</span></li>
+          <li><span>Olaplex tretman</span> <span class="price">4.500 RSD</span></li>
+          <li><span>Hidratantni tretman</span> <span class="price">3.500 RSD</span></li>
+          <li><span>Skalp tretman</span> <span class="price">3.000 RSD</span></li>
+          <li><span>Restorativni paket</span> <span class="price">12.000 RSD</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div style="text-align: center; margin-top: 4rem; font-size: 1.1rem; opacity: 0.85;">
+      <p>* Cene su orijentacione i zavise od dužine i gustine kose.<br>
+      Tačnu cenu određujemo na konsultaciji.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Developed by **VelDeep** • Sva prava zadržana</p>
+  </footer>
+
+  <script>
+    const menu = document.querySelector('#mobile-menu');
+    const menuLinks = document.querySelector('.nav-links');
+
+    menu.addEventListener('click', () => {
+      menu.classList.toggle('is-active');
+      menuLinks.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
